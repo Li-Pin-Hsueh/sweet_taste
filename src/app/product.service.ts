@@ -17,16 +17,16 @@ export class ProductService implements OnInit{
 
   private baseUrl = 'http://localhost:8080/api/';  // URL to web api
 
-  products : Product[] = [] ;
+  //products : Product[] = [] ;
 
   constructor( private http: HttpClient ) { }
 
   ngOnInit() {
 
     // init products
-    this.getProducts().subscribe(
-      p => this.products = p
-    );
+    // this.getProducts().subscribe(
+    //   p => this.products = p
+    // );
 
   }
 
@@ -38,5 +38,6 @@ export class ProductService implements OnInit{
     return this.http.get<Product[]>(url, { responseType: 'json' });
 
   }
+
 
 }
