@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(public productService : ProductService) { }
 
   ngOnInit(): void {
+    this.productService.ngOnInit();
   }
 
 }

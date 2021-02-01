@@ -25,7 +25,7 @@ export class ProductService implements OnInit{
 
     // init products
     this.getProducts().subscribe(
-      p => this.products = p 
+      p => this.products = p
     );
   }
 
@@ -33,6 +33,7 @@ export class ProductService implements OnInit{
   getProducts(): Observable<Product[]> {
 
     const url = this.baseUrl + "home";
+    console.log("READ data...");
     return this.http.get<Product[]>(url, { responseType: 'json' });
 
   }
