@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 //http
 import { HttpClientModule } from "@angular/common/http";
 import { ProductsComponent } from './products/products.component';
@@ -21,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,1 +1,50 @@
-<p>register works!</p>
+<section class="container my-md-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h1 class="py-3 h1 bg-primary text-center d-block d-md-none mb-0" style="color: white;">
+                會員註冊
+            </h1>
+            <div class="row flex-md-row-reverse">
+                <div class="col-md-6">
+                    <div class="bg-primary-lighter p-5">
+                        <h2 class="text-center d-none d-md-block h4">—— 連結社群帳號 ——</h2>
+                        <div class="row">
+                            <div class="my-md-3 col-4 col-md-12">
+                                <button class="btn btn-style btn-block btn-lg h-100 py-3"><img src="assets/images/ic-facebook-logotype.svg" class="img-fluid" width="108" alt=""></button>
+                            </div>
+                            <div class="mb-md-3 col-4 col-md-12">
+                                <button class="btn btn-style btn-block btn-lg py-3 h-100">
+                                    <img src="assets/images/ic-google.svg" class="img-fluid" width="94" alt="">
+                                </button>
+                            </div>
+                            <div class="col-4 col-md-12">
+                                <button class="btn btn-style btn-block btn-lg py-3 h-100">
+                                    <img src="assets/images/ic-yahoo.svg" class="img-fluid" width="97" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="py-3 h1 bg-primary text-center d-none d-md-block mb-0" style="color: white;">
+                        會員註冊
+                    </h1>
+                    <form class="bg-primary p-5" action="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control big-input" id="exampleInputusername" placeholder="username" name="username" [(ngModel)]="formUser.username">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control big-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="formUser.email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control big-input" id="exampleInputPassword1" placeholder="Password" name="Password" placeholder="Enter password" [(ngModel)]="formUser.password">
+                        </div>
+                    </form>
+                    <button  class="btn btn-lg btn-block" style="background: #ffe180; border-color: #ffe180;" (click)="register()">
+                        <h1 class="h4 text-center btn-green-text">註冊帳號</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

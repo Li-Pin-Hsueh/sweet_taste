@@ -22,5 +22,10 @@ export class UserService {
     return this.httpClient.post(apiUrl, user);
   }
 
+  createUser(user:any){
+    const apiUrl =this.baseUrl+'/createuser';
+    return this.httpClient.post(apiUrl,user);
+  }
+
 
 }
