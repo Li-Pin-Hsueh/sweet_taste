@@ -7,7 +7,7 @@
             <div class="col-md-10">
                 <div class="row no-gutters">
                     <a href="#display" class="col-4 rectangle-image-wrap"
-                    (click)="getTopProducts('daily')" [class.active]="this.selectedType == 'daily'">
+                    (click)="getTopProducts('daily')" [class.active]="this.selectedTag == 'daily'">
                         <span class="rectangle-text">本日精選</span>
                         <div class="four-sides rectangle-over zindex--1"></div>
                         <div class="rectangle-image bg-cover"
@@ -15,7 +15,7 @@
                         </div>
                     </a>
                     <a href="#display" class="col-4 rectangle-image-wrap"
-                    (click)="getTopProducts('hot')"  [class.active]="this.selectedType == 'hot'">
+                    (click)="getTopProducts('hot')"  [class.active]="this.selectedTag == 'hot'">
                         <span class="rectangle-text">人氣推薦</span>
                         <div class="four-sides rectangle-over zindex--1"></div>
                         <div class="rectangle-image bg-cover"
@@ -23,7 +23,7 @@
                         </div>
                     </a>
                     <a href="#display" class="col-4 rectangle-image-wrap"
-                    (click)="getTopProducts('new')"  [class.active]="this.selectedType == 'new'">
+                    (click)="getTopProducts('new')"  [class.active]="this.selectedTag == 'new'">
                         <span class="rectangle-text">新品上市</span>
                         <div class="four-sides rectangle-over zindex--1"></div>
                         <div class="rectangle-image bg-cover"
@@ -107,9 +107,9 @@
                 <div class="card-img-top"
                     style="height: 315px; background-image: url( {{item.img}} );">
                     <div class="item-tag">
-                        <strong *ngIf="selectedType=='daily'">本日精選</strong>
-                        <strong *ngIf="selectedType=='hot'">人氣推薦</strong>
-                        <strong *ngIf="selectedType=='new'">新品上市</strong>
+                        <strong *ngIf="selectedTag=='daily'">本日精選</strong>
+                        <strong *ngIf="selectedTag=='hot'">人氣推薦</strong>
+                        <strong *ngIf="selectedTag=='new'">新品上市</strong>
   
                     </div>
                 </div>

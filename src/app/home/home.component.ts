@@ -10,10 +10,10 @@ import { Product } from "../product";
 export class HomeComponent implements OnInit {
 
   allProducts : Product[] = [] ;
-  selectedType : string = '' ;
+  selectedTag : string = '' ;
   displayProducts : Product[] = [];
 
-  constructor(public productService : ProductService) { }
+  constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
 
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     const allProducts = this.allProducts ;
     let count = 0 ;
 
-    this.selectedType = type ;
+    this.selectedTag = type ;
     this.displayProducts = [];
 
     for( let index=0; index < allProducts.length ; index ++){
