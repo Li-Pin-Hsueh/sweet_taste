@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
@@ -22,7 +23,7 @@ export class ProductsComponent implements OnInit {
   countOfHotProducts = 0;
   countOfNewProducts = 0;
 
-  constructor(private productService : ProductService) { }
+  constructor(private productService : ProductService, private cartService : CartService) { }
 
   ngOnInit(): void {
     this.productService.getProducts().
@@ -97,7 +98,7 @@ export class ProductsComponent implements OnInit {
 
   addToCart(product) {
     //TODO
-    //this.cartService.addToCart(product) ;
+    this.cartService.addToCart(product) ;
   }
 
 
