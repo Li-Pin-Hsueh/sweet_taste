@@ -1,3 +1,4 @@
+import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,8 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path:'', component:HomeComponent},
   { path:'products', component:ProductsComponent},
-  { path:'cart', component:CartComponent}
+  { path:'cart', component:CartComponent},
+  { path:'register', component:RegisterComponent}
 
 ]; // sets up routes constant where you define your routes
 
