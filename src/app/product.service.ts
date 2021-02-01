@@ -27,6 +27,7 @@ export class ProductService implements OnInit{
     this.getProducts().subscribe(
       p => this.products = p
     );
+
   }
 
   // GET from "api/home"

@@ -9,13 +9,15 @@ import { Product } from "../product";
 })
 export class HomeComponent implements OnInit {
 
-  selectedType = 'daily' ;
+  selectedType : string = '' ;
   displayProducts : Product[] = [];
 
   constructor(public productService : ProductService) { }
 
   ngOnInit(): void {
+    //this.productService.getProducts().subscribe();
     this.productService.ngOnInit();
+
   }
 
   getTopProducts( type: string ) : void {
