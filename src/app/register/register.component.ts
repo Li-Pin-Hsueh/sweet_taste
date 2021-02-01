@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 export class RegisterComponent implements OnInit {
 
   data: Object | undefined;
-  
+
   formUser: User ;
   users: User[] = [];
   number: number = 0;
@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
         }//表示可以註冊
         else {
           console.log("Regist succeed.")
-          this.router.navigateByUrl("/front/signin");
+          this.router.navigateByUrl("/");
         }
       })
   }
