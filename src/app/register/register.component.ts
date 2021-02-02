@@ -12,7 +12,11 @@ export class RegisterComponent implements OnInit {
 
   data: Object | undefined;
 
-  formUser: User ;
+  formUser: User = {
+    username : '',
+    email : '',
+    password : ''
+  } ;
   users: User[] = [];
   number: number = 0;
 
@@ -30,7 +34,7 @@ export class RegisterComponent implements OnInit {
 
   register() {
 
-    console.log('Current Input', this.formUser);
+    //console.log('Current Input', this.formUser);
     this.userService.createUser(this.formUser).
       subscribe(res => {
 
@@ -38,7 +42,11 @@ export class RegisterComponent implements OnInit {
         console.log('Response: ', this.data);
         //表示重複
         if (this.data == true) {
-          this.formUser = null ;
+          this.formUser = {
+            username : '',
+            email : '',
+            password : ''
+          } ;
         }//表示可以註冊
         else {
           console.log("Regist succeed.")

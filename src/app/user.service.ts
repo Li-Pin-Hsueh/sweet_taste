@@ -8,7 +8,7 @@ import { User } from "./user";
 })
 export class UserService {
 
-  baseUrl = "http://localhost:8080/" ;
+  baseUrl = "http://localhost:8080/api/" ;
 
   constructor( private httpClient: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class UserService {
   }
 
   createUser(user:any){
-    const apiUrl =this.baseUrl+'/createuser';
+    const apiUrl =this.baseUrl+'createuser';
     return this.httpClient.post(apiUrl,user);
   }
 
