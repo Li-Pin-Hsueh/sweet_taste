@@ -38,10 +38,11 @@ export class RegisterComponent implements OnInit {
     this.userService.createUser(this.formUser).
       subscribe(res => {
 
-        this.data = res;
+        this.data = res; // return 0 means exist
         console.log('Response: ', this.data);
         //表示重複
-        if (this.data == true) {
+        if (this.data == 0) {
+          console.log("Register failed.");
           this.formUser = {
             username : '',
             email : '',
@@ -50,7 +51,7 @@ export class RegisterComponent implements OnInit {
         }//表示可以註冊
         else {
           console.log("Regist succeed.")
-          this.router.navigateByUrl("/");
+          this.router.navigateByUrl("/login");
         }
       })
   }
